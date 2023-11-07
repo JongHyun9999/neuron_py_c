@@ -7,7 +7,7 @@ class Neuron:
         self.input_size = input_size
         self.output_size = output_size
         self.sample_num = sample_num
-        self.weight_matrix = [[random.uniform(0, 0.1) for _ in range(input_size)]];
+        self.weight_matrix = [[random.uniform(0, 1) for _ in range(input_size)]];
         # (1X256)
 
     def forward(self, x):
@@ -48,7 +48,7 @@ def one_hot_encoding(label):
         
         labeled_list.append(target_label)
     
-    return transposeMatrix(labeled_list)
+    return labeled_list
 
 
 # class ReLU:
