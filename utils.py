@@ -111,16 +111,6 @@ def calAccuracy(result, label):
         
         labeled_list.append(target_label)
     
-    # for i in range(len(result)):
-    #     print(f'result = {result[i]}')
-    #     print(f'label = {label[i]}')
-    #     print(f'resulted = {index_list[i]}')
-    #     print(f'labeled = {labeled_list[i]}')
-
-    
-
-    # print(len(index_list))
-    # print(len(labeled_list))
     count = 0
     for i in range(len(index_list)):
         if(index_list[i] == labeled_list[i]):

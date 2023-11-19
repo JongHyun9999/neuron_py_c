@@ -74,6 +74,21 @@ def subtractMatrix(matrix1, matrix2):
     
     return result
 
+def addMatrix(matrix1, matrix2):
+    # 두 행렬의 크기가 같은지 확인
+    if len(matrix1) != len(matrix2) or len(matrix1[0]) != len(matrix2[0]):
+        raise ValueError("Matrices must have the same dimensions")
+
+    # 결과를 저장할 빈 행렬 생성
+    result = []
+    
+    # 행렬의 각 요소에 대해 뺄셈 연산 수행
+    for i in range(len(matrix1)):
+        result_row = [matrix1[i][j] + matrix2[i][j] for j in range(len(matrix1[0]))]
+        result.append(result_row)
+    
+    return result
+
 
 def dimMatrix3to2(matrix):
     # 3차원 매트릭스 전치 후 2차원으로 바꾸기
